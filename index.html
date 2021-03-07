@@ -41,9 +41,67 @@
       <div class="row">
         <div class="col-sm-8">col-sm-8</div>
         <div class="col-sm-4">
-          
+          <div class="mySlides">
+            <div class="numbertext">1 / 6</div>
+            <img src="images/backyard.jpg" style="width:100%" alt="my louisiana backyard">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">2 / 6</div>
+            <img src="images/cookie.jpg" style="width:100%" alt="The Woods">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">3 / 6</div>
+            <img src="images/wesley.jpg" style="width:100%" alt="The Woods">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">4 / 6</div>
+            <img src="images/favorite.jpg" style="width:100%" alt="The Woods">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">5 / 6</div>
+            <img src="images/familyPicture.jpg" style="width:100%" alt="The Woods">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">6 / 6</div>
+            <img src="images/mom.jpg" style="width:100%" alt="The Woods">
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+
+          <div class="row">
+            <div class="column">
+              <img class="demo cursor" src="images/backyard.jpg" style="width:100%" onclick="currentSlide(1)" alt="My Backyard In Louisiana">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="images/cookie.jpg" style="width:100%" onclick="currentSlide(2)" alt="My Dog Cookie">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="images/wesley.jpg" style="width:100%" onclick="currentSlide(3)" alt="My Cat Wesley">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="images/favorite.jpg" style="width:100%" onclick="currentSlide(4)" alt="Me & Brad In 'A' School">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="images/familyPicture.jpg" style="width:100%" onclick="currentSlide(5)" alt="Me, Brad & Rayne">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="images/mom.jpg" style="width:100%" onclick="currentSlide(6)" alt="Selfie At Texas Renaissance Festival">
+            </div>
+          </div>
         </div>
+        <!--end column for pictures-->
       </div>
+      <!--end div row1-->
       <div class="row">
         <div class="col-sm">col-sm</div>
         <div class="col-sm">col-sm</div>
@@ -51,13 +109,47 @@
       </div>
     </div>
 
-  </div>
+  </div><!-- end main div -->
 
 
   <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="https://kit.fontawesome.com/ade06fbd85.js" crossorigin="anonymous"></script>
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {
+        slideIndex = 1
+      }
+      if (n < 1) {
+        slideIndex = slides.length
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      captionText.innerHTML = dots[slideIndex - 1].alt;
+    }
+  </script>
 </body>
 
 </html>
