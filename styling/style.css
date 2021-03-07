@@ -1,4 +1,4 @@
-body {font-family: "Lato", sans-serif;}
+body {font-family: 'Josefin Sans', "Lato", sans-serif;}
 
 :root{
   --sage:rgb(206, 208, 151);
@@ -50,12 +50,14 @@ body {font-family: "Lato", sans-serif;}
 
 /*---------------------------header--------------------------*/
 header{
-  background: url("headerImg.jpg");
+  background: url("header.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  text-align: center;
 }
 header h1{
   font-size: 6rem;
   color: var(--middleblue);
   padding: 4rem;
+  text-shadow: 2px 2px 6px #4d4d4d, -2px 2px 6px #4d4d4d;
 }
