@@ -1,4 +1,61 @@
-body{
-  background-color: grey;
-  color: white;
+body {font-family: "Lato", sans-serif;}
+
+:root{
+  --sage:rgb(206, 208, 151);
+  --deeptaupe: rgb(122, 98, 99);
+  --middleblue: rgb(126, 189, 195);
+  --teagreen: rgb(198, 222, 166);
+  --nyanza: rgb(223, 242, 216);
+
+}
+
+.profileIcon{
+  border-radius: 50%;
+  max-width: 200px;
+  border: 5px solid var(--nyanza);
+}
+.profileIconDiv{
+  text-align: center;
+}
+
+.sidebar {
+  height: 100%;
+  width: 15rem;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: var(--deeptaupe);
+  overflow-x: hidden;
+  padding-top: 16px;
+}
+
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: var(--nyanza);
+  display: block;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 15rem; /* Same as the width of the sidenav */
+  padding: 0px 0px;
+  background-color: var(--nyanza);
+}
+
+/*---------------------------header--------------------------*/
+header{
+  background: url("headerImg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header h1{
+  font-size: 6rem;
+  color: var(--middleblue);
+  padding: 4rem;
 }
