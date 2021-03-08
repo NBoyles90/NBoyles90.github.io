@@ -9,20 +9,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/responsivestyle.css">
+  <link rel="stylesheet" href="styling/bootstrap.min.css">
+  <link rel="stylesheet" href="styling/style.css">
+  <link rel="stylesheet" href="styling/responsivestyle.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
 
-  <title>Nikki Boyles Portfolio</title>
+
+  <title>Contact Nikki Boyles</title>
 </head>
 
 <body>
+  <div class="container-fluid">
+    <div class="sidebar">
+      <div class="profileIconDiv">
+        <img class="profileIcon" src="images/profileIcon.jpg" alt="Profile picture of Nikki Boyles">
+      </div>
+      <br>
+      <br>
+      <a href="index.html">About Me</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact Me</a>
+    </div>
+
+    <div class="main">
+
+
+
+    </div><!-- end main div -->
+  </div>
+  <!--end container fluid-->
 
 
   <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="https://kit.fontawesome.com/ade06fbd85.js" crossorigin="anonymous"></script>
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {
+        slideIndex = 1
+      }
+      if (n < 1) {
+        slideIndex = slides.length
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      captionText.innerHTML = dots[slideIndex - 1].alt;
+    }
+  </script>
 </body>
 
 </html>
