@@ -16,10 +16,6 @@
     font-size: 4rem;
     padding: 2rem;
   }
-
-}
-
-@media (max-width: 1000px){
   .smallercol{
     display: none;
   }
@@ -28,6 +24,12 @@
     max-width: 100%;
     text-align: center;
   }
+
+}
+
+@media (max-width: 1000px){
+
+
   .collineup{
     flex: none;
     margin-bottom: 100px;

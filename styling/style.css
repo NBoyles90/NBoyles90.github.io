@@ -62,7 +62,7 @@ border-radius: 50%;
 }
 .main {
   margin-left: 15rem; /* Same as the width of the sidenav */
-  padding: 0px 0px;
+  padding: 0px 20px;
   /* background-color: var(--nyanza); */
 }
 
