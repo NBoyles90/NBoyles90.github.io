@@ -73,18 +73,14 @@ header{
   background-size: cover;
   text-align: center;
 }
-/* .noheaderimg{
-  background: none;
-} */
+
 header h1{
   font-size: 6rem;
   color: var(--middleblue);
   padding: 4rem;
   text-shadow: 2px 2px 6px #4d4d4d, -2px 2px 6px #4d4d4d;
 }
-/* .noheaderimg h1{
-  padding: 2rem;
-} */
+
 
 /*--------------------------carosel--------------------------*/
 
@@ -175,7 +171,7 @@ img {
   opacity: 1;
 }
 
-.col-sm-8 h2{
+.col-sm-8 h2, .biggercol h4{
   padding-top: 2rem;
   text-indent: 1rem;
   color: var(--deeptaupe);
